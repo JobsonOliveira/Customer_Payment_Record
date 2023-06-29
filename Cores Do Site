@@ -1,0 +1,7 @@
+#0022E0 = Azul mais escuro = Para manter a atenção do cliente
+#0098F0 = Azul escuro = Desviar a atençãp
+#0BC5DE = Azul claro = Desviar a atenção
+#C8FA00 = amarelado = Manter a atenção/nem tanto
+#1CC20D = Verde = Para manter a atenção do cliente
+
+overflow-x: hidden; /* Hide horizontal scrollbar */
