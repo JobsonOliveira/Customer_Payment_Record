@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Concert One','Ultra', 'DM Serif Text', Arial;
-}@media (min-width: 544px) and (max-width: 2000px){
+}
+a{
+    color: blue;
+}
+@media (min-width: 544px) and (max-width: 2000px){
     /*TODA A PÁGINA*/
 body{
     display: flex;
@@ -95,6 +99,7 @@ label{
     top: 2vh;
     font-size: 3.5vh;
     transition: 1s;
+    pointer-events: none;
 }
 /*LABEL DE LOGIN RELACIONADO AO CLICK NO INPUT*/
 input#login:focus ~ #Labellogin,
@@ -121,7 +126,7 @@ button{
     width: 40vh;
     height: 8vh;
     position: relative;
-    background: linear-gradient(to left, #bdbcbc, #5f92ff);
+    background: linear-gradient(to left, #0099ff, #01fdbe);
     font-size: 5vh;
     transition: .5s;
     border: none;
@@ -129,7 +134,7 @@ button{
 /*INTERAÇÃO DO BOTÃO CM O USUÁRIO*/
 button:focus,
 button:hover{
-    background: linear-gradient(to left, #bdbcbc, #5f92ff);
+    background: linear-gradient(to left, #ffe600, #01fdbe);
     animation: btncor 1s infinite linear;
 }
 /*KEYFRAME DE INTERAÇÃ DO BOTÃO*/
@@ -310,8 +315,5 @@ p{
     position: relative;
     top: 0vh;
     font-size: 3vh;
-}
-a{
-    color: blue;
 }
 }

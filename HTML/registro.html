@@ -2,10 +2,50 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Concert+One&family=DM+Serif+Text&family=Mate+SC&family=Press+Start+2P&family=Ultra&display=swap" rel="stylesheet">
+    <title>Se Registrar</title>
+    <link rel="stylesheet" href="../CSS/register.css">
 </head>
 <body>
-    
+	
+    <div id="box">
+    	<!--TOPO DO SITE-->
+        <div id="top">
+        	<h1>Customer Payment Record</h1>
+        	<h2>Página de registro</h2>
+    	</div>
+    	<!--MEIO DO SITE-->
+    	<div id="main">
+        	<input type="text" required name="nome" id="nome">
+        	<label id="Labelnome">Nome:</label>
+        	<input type="text" required name="sobrenome" id="sobrenome">
+        	<label id="Labelsobrenome">Sobrenome:</label>
+        	<input type="text" required name="login" id="login">
+        	<label id="Labellogin">Login:</label>
+        	<input type="password" required name="senha" id="senha">
+        	<label id="Labelsenha">Senha:</label>
+        	<!--DATA DE NASCIMENTO-->
+        	<div id='Dnasc_Genero'>
+        		<label id="LabelDatNasc">Data de nascimento:</label>
+        		<label id="LabelGenero">Gênero:</label>
+        		<input type="date" required name="dataNascimento" id="dataNascimento">
+        		<select id="genero">
+        			<option value='outro'>Outro</option>
+        			<option value='feminino'>Feminino</option>
+        			<option value='masculino'>Masculino</option>
+        		</select>
+        	</div>
+    	</div>
+    	<!--RODAPÉ DO SITE-->
+    	<div id="footer">
+        	<button id='btnCadastra'>CADASTRAR</button>
+        	<h3><a href='../index.html'>Página inicial.</a></h3>
+    	</div>
+    </div>
+	<script type="text/javascript" src="../JavaScript/register.js"></script>
 </body>
 </html>
