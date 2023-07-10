@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Concert+One&family=DM+Serif+Text&family=Mate+SC&family=Press+Start+2P&family=Ultra&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/paginaPrincipal.css">
+</head>
+<body>
+	<!--POPPUP PARA ADICIONAR UM NOVO PARAGMENTO-->
+	<dialog id="dialogAddPag">
+		<!--POPPUP QUE MOSTRA MENSÁGEM SOBRE A ADIÇÃO DE UM NOVO PAGAMENTO-->
+		<dialog id="MensagensSobreAddPag">
+			<div id="mensagensNovPag">
+				
+			</div>
+		</dialog>
+		<!--DIV PARA ADICIONAR UM NOVO PAGAMENTO-->
+		<div id='AddPagamento'>
+			<div id='imgFechar'>
+				<img id='fechar' src='https://cdn.iconscout.com/icon/free/png-256/free-x-50-433185.png' alt=''>
+			</div>
+            <h2>ADICIONAR NOVO PAGAMENTO</h2>
+			<div id="entradasNovPag">
+                <input type='text' name='cliente' placeholder='Nome do cliente' id='cliente'>
+                <input type='date' name='vencimento' placeholder='Vencimento do boleto' id='vencimento' required>
+                <input type='date' name='pagamento' placeholder='Data de pagamento' id='pagamento' required>
+                <input type='number' name='valor' placeholder='Valor recolhido' id='valor'>
+                <input type='text' name='forma' placeholder='Froma de pagamento' id='forma'>
+            </div>
+			<div id='butttons'>
+				<button id='apagar'>APAGAR</button>
+				<button id='salvar'>SALVAR</button>
+			</div>
+		</div>
+	</dialog>
+
+	<!--POPPUP QUA APARECE ANTES DE FECHAR O SITE-->
+	<dialog id="saindoDoSite">
+		<div id="mensagem">
+			<p>Você saiu do site.</p>
+		</div>
+	</dialog>
+
+	<div id="topo">
+		<div id="logo">
+			<img src="../Icones/logoOFC.png" alt="logo do site">
+		</div>
+		<div id="nomeSite">
+			<h1>CUSTOMER PAYMENT RECORD</h1>
+		</div>
+		<div id="infoPessoais">
+			<label><h3>Nome:&nbsp</h3>Jobson de oliveira coutinho</label>
+			<label><h3>Login:&nbsp</h3>Jobson Oliveira</label>
+			<label><h3>Data de nascimento:&nbsp</h3>05/06/2001</label>
+			<label><h3>Gênero:&nbsp</h3>Masculino</label>
+		</div>
+		<div id="buttonSair"><button id="sair"><img src="https://cdn-icons-png.flaticon.com/128/660/660350.png" alt=""></button></div>
+	</div>
+	<div id="meio">
+		<button id="RegistPag">REGISTRAR NOVO PAGAMENTO</button>
+		<div id="pagamentos">
+			<table id="tablePagamentos">
+
+			</table>
+		</div>
+	</div>
+	<div id="final">
+		<h4><h3>Criador do site:&nbsp</h3>Jobson de OLiveira Coutinho</h4>
+	</div>
+<script type="text/javascript" src="../JavaScript/paginaPrincipal.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'DM Serif Text', 'Arial';
+    display: grid;
+    background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
+}
+/*POPPUP SOBRE A ADIÇÃO DE UM NOVO PARAMENTO*/
+#MensagensSobreAddPag{
+    background: linear-gradient(to left, rgb(188, 238, 196), rgb(171, 208, 250));
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    padding: 1vh;
+	transform: translate(-40% -0%);
+	font-size: 3vh;
+	text-align: center;
+    border: 1px solid #0353ffda;
+    border-radius: 5px;
+    color: #000;
+    animation: alerta 1s infinite linear;
+}
+/*ANIMAÇÃO PARA O POPPUP DE ADIÇÃO DE UM NOVO PAGAMENTO*/
+@keyframes alerta {
+    from{
+        background: rgb(248, 248, 248);
+    }
+    50%{
+        background: rgb(252, 206, 0);
+    }
+    to{
+        background: rgb(248, 248, 248);
+    }
+}
+#mensagensNovPag p{
+    overflow-wrap: break-word;
+}
+/*POPPUP QUE APARECE ANTES DE SAIR DO SITE*/
+dialog#saindoDoSite{
+	background: linear-gradient(to left, rgb(167, 255, 181), rgb(127, 187, 255));
+    position: absolute;
+    top: 10%;
+    left: 35%;
+	transform: translate(-40% -40%);
+	width: 50vh;
+	height: 8vh;
+	font-size: 5vh;
+	text-align: center;
+    border: 1px solid #0353ffda;
+    border-radius: 5px;
+}
+/*POPPUP PARA ADICIONAR PAGAMENTO*/
+dialog#dialogAddPag{
+    background: linear-gradient(to left, rgb(167, 255, 181), rgb(127, 187, 255));
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    transform: translate(-40% -40%);
+    border: 1px solid #0353ffda;
+    border-radius: 15px;
+}
+/*DIV TRONCO DO POPPUP PARA ADICIONAR PAGAMENTO*/
+div#AddPagamento{
+    padding: 1vh;
+}
+/*DIV COM A IMAGEM DO 'X' PARA FECHAR O POPPUP*/
+div#imgFechar{
+    text-align: right;
+}
+/*IMAGEM DO 'X' PARA FECHAR O POPPUP*/
+img#fechar{
+    width: 5vh;
+    cursor: pointer;
+}
+/*TÍTULO 'ADICIONAR NOVO PAGAMENTO'*/
+div#AddPagamento h2{
+    padding: 1vh;
+    text-decoration: underline;
+}
+/*DIV COM OS IMPUTs DE ENTRADA DOS DADOS*/
+#entradasNovPag{
+    padding: 1vh;
+    display: grid;
+    gap: 1vh;
+    border: 1px solid #0353ffda;
+    border-radius: 15px;
+}
+/*INPUTs PARA ADICIONAR NOVO PAGAMENTO*/
+div#entradasNovPag input{
+    height: 5vh;
+    font-size: 3vh;
+    text-align: center;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+/*PLACEHOLDER DE DENTRO DOS INPUTs*/
+div#entradasNovPag input::placeholder{
+    color: #292727da;
+}
+/*DIV COM OS BUTTONs PARA SALVAR AS INFORMAÇÕES E PARA APAGAR AS INFORMAÇÕES*/
+div#butttons{
+    margin-top: 5vh;
+    padding: 1vh;
+    text-align: center;
+}
+/*BUTTONs "APAGAR" E "SALVAR"*/
+div#butttons button{
+    width: 25vh;
+    height: 5vh;
+    border-radius: 15px;
+    cursor: pointer;
+    background: linear-gradient(to left, #0099ff, #01fdbe);
+    border: 1px solid #000;
+}
+/*ANIMAÇÃO QUANDO OS BUTTONs FORAM CLICADOS*/
+div#butttons button:hover{
+    background: linear-gradient(to left, #ffe600, #01fdbe);
+    animation: btncor 1s infinite linear;
+}
+/*KEYFRAME DE INTERAÇÃO DOS BUTTTONs*/
+@keyframes btncor {
+    from{
+        color: transparent;
+        border: 1px solid #fff;
+    }
+    50%{
+        color: #000;
+        border: 1px solid #000;
+    }
+    to{
+        color: transparent;
+        border: 1px solid #fff;
+    }
+}
+
+/*---------------------------------------------------------TOPO DO SITE*/
+
+/*DIV TONCO DO TOPO DO SITE*/
+div#topo{
+	background-color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	border-bottom: 2px solid #000;
+}
+/*DIV COM A LOGO DO SITE*/
+div#logo{
+	padding: 1vh;
+}
+div#logo img{
+	width: 17vh;
+	border-radius: 15px;
+	border: 1px solid #000;
+}
+/*NOME DO SITE*/
+div#nomeSite{
+	flex-grow: 1;
+	text-align: center;
+	font-size: 3.5vh;
+	padding-top: 5vh;
+}
+/*DIV COM AS INFORMAÇÕES PESSOAIS E O BOTÃO DE SAÍDA*/
+div#infoPessoais{
+	padding: 2vh;
+	width: 55vh;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+/*LABELs AONDE FICAM AS INFORMAÇÕES DA PESSOA QUE FEZ LOGIN*/
+div#infoPessoais label{
+	display: flex;
+}
+/*BUTTTON PARA SAIR DO SITE*/
+div#topo button{
+	margin-top: 5vh;
+	margin-right: 2vh;
+	margin-left: 2vh;
+	padding: 1vh;
+	cursor: pointer;
+    background: linear-gradient(to left, #0099ff, #01fdbe);
+    border: 1px solid #000;
+	border-radius: 5px;
+}
+div#topo button#sair:hover{
+    background: linear-gradient(to left, #ffe600, #01fdbe);
+    animation: btncor 1s infinite linear;
+}
+div#buttonSair img{
+	width: 6vh;
+}
+
+/*---------------------------------------------------------------MEIO DO SITE*/
+
+/*DIV TRONCO DO MEIO DO SITE*/
+div#meio{
+	background-color: rgba(255, 255, 255, 0.4);
+}
+/*BUTTON PARA ADICIONAR NOVO PAGAMENTO*/
+button#RegistPag{
+	padding: 1vh;
+	cursor: pointer;
+    background: linear-gradient(to left, #0099ff, #01fdbe);
+    border: 1px solid #000;
+	border-radius: 5px;
+	margin: 1vh;
+}
+/*DIV ONDE TEM A LISTA DE PAGAMENTOS REGISTRADOS*/
+div#pagamentos{
+	background-color: rgba(255, 255, 255 , .6);
+}
+/*---------------------------------------------------------------FINAL DO SITE*/
+
+/*DIV TRONCO DO FINAL DO SITE*/
+div#final{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+div#final{
+	justify-content: center;
+	display: flex;
+}

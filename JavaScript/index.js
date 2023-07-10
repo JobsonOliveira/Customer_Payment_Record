@@ -1,3 +1,3 @@
 document.querySelector('#entrar').addEventListener('click', () => {
-    alert("Pedimos desculpas, infelizmente o site principal não está indisponível no momento.");
+    window.open('../HTML/paginaPrincipal.html','_self');
 });

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Concert One','Ultra', 'DM Serif Text', Arial;
 }
 a{
     color: blue;
@@ -10,6 +9,7 @@ a{
 @media (min-width: 544px) and (max-width: 2000px){
     /*TODA A PÁGINA*/
 body{
+    font-family:'DM Serif Text', 'Arial';
     display: flex;
     background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
     justify-content: center;
@@ -20,14 +20,12 @@ body{
     display: flex;
     gap: 1vh;
     width: 95vh;
-    height: 75vh;
     padding: 1vh;
 }
 /*AREA ONDE TEM A LOGO E A MENSAGEM DE BOAS VINDAS*/
 #boasVindas{
     display: grid;
     width: 25vh;
-    height: 73vh;
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #0353ffda;
     border-radius: 15px;
@@ -49,7 +47,6 @@ div#logo img{
 /*DIV PARA A MENSAGEM DE BOAS VINDAS*/
 div#mensagemBoasVindas{
     width: 23.3vh;
-    height: 48.5vh;
     top: -10vh;
     border-radius: 15px;
     padding: 2px;
