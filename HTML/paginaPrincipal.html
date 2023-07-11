@@ -26,11 +26,16 @@
 			</div>
             <h2>ADICIONAR NOVO PAGAMENTO</h2>
 			<div id="entradasNovPag">
-                <input type='text' name='cliente' placeholder='Nome do cliente' id='cliente'>
-                <input type='date' name='vencimento' placeholder='Vencimento do boleto' id='vencimento' required>
-                <input type='date' name='pagamento' placeholder='Data de pagamento' id='pagamento' required>
-                <input type='number' name='valor' placeholder='Valor recolhido' id='valor'>
-                <input type='text' name='forma' placeholder='Froma de pagamento' id='forma'>
+				<label for="">Nome do cliente:</label>
+                <input type='text' name='cliente' placeholder="" id='cliente'>
+				<label for="">Vencimento do boleto:</label>
+                <input type='date' name='vencimento' id='vencimento'>
+				<label for="">Data do pagamento:</label>
+                <input type='date' name='pagamento' id='pagamento'>
+				<label for="">Valor recolhido:</label>
+                <input type='number' name='valor' placeholder="" id='valor'>
+				<label for="">Forma de pagamento:</label>
+                <input type='text' name='forma' placeholder="" id='forma'>
             </div>
 			<div id='butttons'>
 				<button id='apagar'>APAGAR</button>
@@ -45,7 +50,7 @@
 			<p>Você saiu do site.</p>
 		</div>
 	</dialog>
-
+	<!----------------------TOPO DO SITE----------------------------->
 	<div id="topo">
 		<div id="logo">
 			<img src="../Icones/logoOFC.png" alt="logo do site">
@@ -61,14 +66,36 @@
 		</div>
 		<div id="buttonSair"><button id="sair"><img src="https://cdn-icons-png.flaticon.com/128/660/660350.png" alt=""></button></div>
 	</div>
+	<!----------------------MEIO DO SITE----------------------------->
 	<div id="meio">
 		<button id="RegistPag">REGISTRAR NOVO PAGAMENTO</button>
 		<div id="pagamentos">
 			<table id="tablePagamentos">
-
+					<tr id="informacoes">
+						<td>Id:</td>
+						<td>Nome do cliente:</td>
+						<td>Vencimento do boleto:</td>
+						<td>Data do pagamento:</td>
+						<td>Valor recolhido:</td>
+						<td>Forma de pagamento:</td>
+						<td id="opcoes">Opções:</td>
+					</tr>
+					<tr class="InfoPagamentos">
+						<td>1</td>
+						<td>Jobson de Oliveira coutinho</td>
+						<td>05/06/2023</td>
+						<td>05/06/2023</td>
+						<td>55</td>
+						<td>Pix</td>
+						<td class="buttons">
+							<button id="apagarPag">Apagar</button>
+							<button id="editarPag">Editar</button>
+						</td>
+					</tr>
 			</table>
 		</div>
 	</div>
+	<!----------------------RODAPÉ DO SITE----------------------------->
 	<div id="final">
 		<h4><h3>Criador do site:&nbsp</h3>Jobson de OLiveira Coutinho</h4>
 	</div>

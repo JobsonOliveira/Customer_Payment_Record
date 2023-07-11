@@ -211,7 +211,46 @@ button#RegistPag{
 }
 /*DIV ONDE TEM A LISTA DE PAGAMENTOS REGISTRADOS*/
 div#pagamentos{
-	background-color: rgba(255, 255, 255 , .6);
+    display: flex;
+	background-color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+/*TABELA DE PAGAMENTOS*/
+table#tablePagamentos{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 99%;
+}
+/*LINHA DA TABELA DE PAGAMENTOS*/
+table#tablePagamentos tr#informacoes td{
+    border: 1px solid #000;
+    padding-left: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+/*LINHA DA TABELA PARA NOVOS PAGAMENTOS*/
+table#tablePagamentos tr.InfoPagamentos td{
+    border: 1px solid #000;
+    font-size: 2vh;
+    padding-left: 5px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+table#tablePagamentos tr.InfoPagamentos td.buttons,
+table#tablePagamentos tr#informacoes td#opcoes{
+    width: 21vh;
+    padding: 0;
+}
+/*BUTTONs DEEDITAR E DELETAR PAGAMENTO*/
+table#tablePagamentos tr.InfoPagamentos button{
+    width: 10vh;
+    height: 4vh;
+	cursor: pointer;
+    background: linear-gradient(to left, #0099ff, #01fdbe);
+    border: 1px solid #000;
+	border-radius: 5px;
 }
 /*---------------------------------------------------------------FINAL DO SITE*/
 
