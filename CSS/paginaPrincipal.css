@@ -235,6 +235,10 @@ tbody td{
     text-align: center;
     font-size: 2.5vh;
 }
+tbody td img{
+    width: 20px;
+    cursor: pointer;
+}
 
 /*---------------------------------------------------------------FINAL DO SITE*/
 

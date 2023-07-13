@@ -2,14 +2,8 @@
     let modal = document.querySelector("#dialogAddPag");
     document.querySelector('#RegistPag').addEventListener('click', () => {
        modal.show();
+       document.querySelector('#salvar').innerHTML = 'Salvar';
        
-       //ZERAR OS INPUTs TODAS AS VEZES QUE O POPPUP FOR ABERTO
-       document.querySelector("#cliente").value = '';
-       document.querySelector("#vencimento").value = '';
-       document.querySelector("#pagamento").value = '';
-       document.querySelector("#valor").value = '';
-       document.querySelector("#forma").value = '';
-   
     });
     //FECHA O POPPUP DE ADIÇÃO DE PAGAMENTO
     document.querySelector('#fechar').addEventListener('click', () => {
@@ -61,15 +55,6 @@
             window.open('../index.html', '_self');
         }, "1000");
     });
-   /* //APAGAR PAGAMENTO
-    document.querySelector('#apagarPag').addEventListener('click', () => {
-       alert('apagar');
-    });
-    //EDITAR PAGAMENTO
-    document.querySelector('#editarPag').addEventListener('click', () => {
-       alert('editar');
-    });*/
-    
    class adicionarPagamento{
        constructor() {
            this.id = 1;
@@ -94,6 +79,7 @@
                this.adicionar(pagamento);
            }else{
                this.atualizar(this.editId, pagamento);
+
            }
            
            this.listaTabela();
@@ -139,20 +125,53 @@
                let td_Pagamento = tr.insertCell();
                let td_Valor = tr.insertCell();
                let td_Forma = tr.insertCell();
-                   
+               let td_Acao = tr.insertCell();
    
                td_id.innerText = this.arrayPagamentos[i].id;
                td_NomeCli.innerText = this.arrayPagamentos[i].nomeCliente;
                td_Vencimento.innerText = this.arrayPagamentos[i].Vencimento;
                td_Pagamento.innerText = this.arrayPagamentos[i].Pagamento;
                td_Valor.innerText = this.arrayPagamentos[i].Valor;
-               td_Forma.innerText = this.arrayPagamentos[i].Forma;	
-               
-               /*alert(`id: ${td_id.innerText} cliente: ${td_NomeCli.innerText} vencimento: ${td_Vencimento.innerText} pagamento: ${td_Pagamento.innerText} valor: ${td_Valor.innerText} forma: ${td_Forma.innerText}`);*/
-                       
-               
+               td_Forma.innerText = this.arrayPagamentos[i].Forma;	  
+
+               //ZERAR OS INPUTs TODAS AS VEZES QUE O POPPUP FOR ABERTO
+                document.querySelector("#cliente").value = '';
+                document.querySelector("#vencimento").value = '';
+                document.querySelector("#pagamento").value = '';
+                document.querySelector("#valor").value = '';
+                document.querySelector("#forma").value = '';
+   
+
+
+               let imgEdit = document.createElement('img');
+						imgEdit.src = '../Imagens/lapis.png';
+						imgEdit.setAttribute("onclick", "addPagamento.preparaEdicao("+ JSON.stringify(this.arrayPagamentos[i]) +")");
+					
+						let imgDelete = document.createElement('img');
+						imgDelete.src = '../Imagens/lixeira.png';
+						imgDelete.setAttribute("onclick", "addPagamento.deletar("+ this.arrayPagamentos[i].id +")");
+					
+						//ADICIONAR A IMAGEM AO td_acoes (DIZER QUE É UMA FILHA DE td_acoes) logo acima
+						td_Acao.appendChild(imgEdit);
+						td_Acao.appendChild(imgDelete);
            }			
        }
+       preparaEdicao(pagamento){
+        this.editId = pagamento.id;
+
+        let modal = document.querySelector("#dialogAddPag");
+        modal.show();
+
+        document.querySelector('#cliente').value = pagamento.nomeCliente;
+        document.querySelector('#vencimento').value = pagamento.Vencimento;
+        document.querySelector('#pagamento').value = pagamento.Pagamento;
+        document.querySelector('#valor').value = pagamento.Valor;
+        document.querySelector('#forma').value = pagamento.Forma;
+
+        //MUDAR O NOME DO BOTÃO PARA "Atualizar"
+        document.querySelector('#salvar').innerHTML = 'Atualizar';
+
+    }
        limpar(){
        
            document.querySelector('#cliente').value = '';
@@ -166,16 +185,30 @@
        }
        atualizar(editId, pagamento){
            for (let i = 0; i < this.arrayPagamentos.length; i++) {
-               if(this.arrayPagamentos[i].id == id){
+
+               if(this.arrayPagamentos[i].id == editId){
                    this.arrayPagamentos[i].nomeCliente = pagamento.nomeCliente;
-                   this.arrayPagamentos[i].Vencimento = pagamento.Vencimento;
-                   this.arrayPagamentos[i].Pagamento = pagamento.Pagamento;
+                   this.arrayPagamentos[i].Vencimento = '05/06/2023';
+                   this.arrayPagamentos[i].Pagamento = '05/06/2023';
                    this.arrayPagamentos[i].Valor = pagamento.Valor;
                    this.arrayPagamentos[i].Forma = pagamento.Forma;
-                   alert('atualizar');
                }	
            }
        }
+       deletar(id){
+        if(confirm("Deseja realmente deletar estes dados?")){
+            //ATUALIZAR A LISTA
+            let tbody = document.querySelector('#tbody');
+        
+            //PEERCORRER O ARRAY E IDENTIFICAR O ID DO ITEM QUE FOI SELECIONADO
+            for(let i = 0; i < this.arrayPagamentos.length; i++){
+                if(this.arrayPagamentos[i].id == id){
+                    this.arrayPagamentos.splice(i, 1);
+                    tbody.deleteRow(i);
+                }
+            }
+        }
+    }
        
    }
    var addPagamento = new adicionarPagamento();
