@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Concert+One&family=DM+Serif+Text&family=Mate+SC&family=Press+Start+2P&family=Ultra&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/paginaPrincipal.css">
+	<link rel="stylesheet" href="../CSS/paginaPrincipal.css">
 </head>
 <body>
 	<!--POPPUP PARA ADICIONAR UM NOVO PARAGMENTO-->
@@ -71,27 +71,18 @@
 		<button id="RegistPag">REGISTRAR NOVO PAGAMENTO</button>
 		<div id="pagamentos">
 			<table id="tablePagamentos">
-					<tr id="informacoes">
-						<td>Id:</td>
-						<td>Nome do cliente:</td>
-						<td>Vencimento do boleto:</td>
-						<td>Data do pagamento:</td>
-						<td>Valor recolhido:</td>
-						<td>Forma de pagamento:</td>
-						<td id="opcoes">Opções:</td>
-					</tr>
-					<tr class="InfoPagamentos">
-						<td>1</td>
-						<td>Jobson de Oliveira coutinho</td>
-						<td>05/06/2023</td>
-						<td>05/06/2023</td>
-						<td>55</td>
-						<td>Pix</td>
-						<td class="buttons">
-							<button id="apagarPag">Apagar</button>
-							<button id="editarPag">Editar</button>
-						</td>
-					</tr>
+					<theade>
+						<th>Id:</th>
+						<th>Nome do cliente:</th>
+						<th>Vencimento do boleto:</th>
+						<th>Data do pagamento:</th>
+						<th>Valor recolhido:</th>
+						<th>Forma de pagamento:</th>
+						<th id="opcoes">Opções:</th>
+					</theade>
+					<tbody id="tbody">
+						
+					</tbody>
 			</table>
 		</div>
 	</div>
@@ -99,6 +90,6 @@
 	<div id="final">
 		<h4><h3>Criador do site:&nbsp</h3>Jobson de OLiveira Coutinho</h4>
 	</div>
-<script type="text/javascript" src="../JavaScript/paginaPrincipal.js"></script>
+	<script type="text/javascript" src="../JavaScript/paginaPrincipal.js"></script>
 </body>
 </html>

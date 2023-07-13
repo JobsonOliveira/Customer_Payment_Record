@@ -223,35 +223,19 @@ table#tablePagamentos{
     width: 99%;
 }
 /*LINHA DA TABELA DE PAGAMENTOS*/
-table#tablePagamentos tr#informacoes td{
-    border: 1px solid #000;
-    padding-left: 5px;
+table th{
+border: 1px solid #000;
+background-color: green;
     font-weight: bold;
     text-align: center;
+    font-size: 3vh;
 }
-/*LINHA DA TABELA PARA NOVOS PAGAMENTOS*/
-table#tablePagamentos tr.InfoPagamentos td{
-    border: 1px solid #000;
-    font-size: 2vh;
-    padding-left: 5px;
-    font-weight: bold;
+tbody td{
+	border: 1px solid #000;
     text-align: center;
-    color: #000;
+    font-size: 2.5vh;
 }
-table#tablePagamentos tr.InfoPagamentos td.buttons,
-table#tablePagamentos tr#informacoes td#opcoes{
-    width: 21vh;
-    padding: 0;
-}
-/*BUTTONs DEEDITAR E DELETAR PAGAMENTO*/
-table#tablePagamentos tr.InfoPagamentos button{
-    width: 10vh;
-    height: 4vh;
-	cursor: pointer;
-    background: linear-gradient(to left, #0099ff, #01fdbe);
-    border: 1px solid #000;
-	border-radius: 5px;
-}
+
 /*---------------------------------------------------------------FINAL DO SITE*/
 
 /*DIV TRONCO DO FINAL DO SITE*/
