@@ -126,6 +126,7 @@
                let td_Valor = tr.insertCell();
                let td_Forma = tr.insertCell();
                let td_Acao = tr.insertCell();
+               td_id.classList.add('idDoPag');
    
                td_id.innerText = this.arrayPagamentos[i].id;
                td_NomeCli.innerText = this.arrayPagamentos[i].nomeCliente;
@@ -199,12 +200,27 @@
         if(confirm("Deseja realmente deletar estes dados?")){
             //ATUALIZAR A LISTA
             let tbody = document.querySelector('#tbody');
-        
+            var oId;
             //PEERCORRER O ARRAY E IDENTIFICAR O ID DO ITEM QUE FOI SELECIONADO
             for(let i = 0; i < this.arrayPagamentos.length; i++){
                 if(this.arrayPagamentos[i].id == id){
+                    oId = this.arrayPagamentos[i].id;
                     this.arrayPagamentos.splice(i, 1);
                     tbody.deleteRow(i);
+                }
+            }
+            for (let i = 0; i < this.arrayPagamentos.length; i++) {
+                if (oId < this.arrayPagamentos[i].id) {
+                    alert('');
+                    let clasAtual = 0;
+                    if((document.querySelector('.idDoPag').innerText > oId) && (document.querySelector('.idDoPag').innerText > clasAtual)){
+                        clasAtual = document.querySelector('.idDoPag').innerText;
+                        document.querySelector('.idDoPag').innerText -= 1;
+
+                        alert('class' + document.querySelector('.idDoPag').innerText);
+                        alert('array' + this.arrayPagamentos[i].id);
+                    }
+                    //td_id[i].innerText = td_id[i] - 1;
                 }
             }
         }
