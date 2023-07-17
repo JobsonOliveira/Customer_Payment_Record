@@ -29,13 +29,20 @@
 				<label for="">Nome do cliente:</label>
                 <input type='text' name='cliente' placeholder="" id='cliente'>
 				<label for="">Vencimento do boleto:</label>
-                <input type='date' name='vencimento' id='vencimento'>
+                <input type='datetime' name='vencimento' id='vencimento'>
 				<label for="">Data do pagamento:</label>
-                <input type='date' name='pagamento' id='pagamento'>
+                <input type='datetime' name='pagamento' id='pagamento'>
 				<label for="">Valor recolhido:</label>
                 <input type='number' name='valor' placeholder="" id='valor'>
 				<label for="">Forma de pagamento:</label>
-                <input type='text' name='forma' placeholder="" id='forma'>
+				<select name='forma' id='forma'>
+					<option value='Pix'>Pix</option>
+        			<option value='Espécie'>Espécie</option>
+					<option value='Débito'>Débito</option>
+        			<option value='Crédito 1X'>Crédito 1X</option>
+					<option value='Crédito 2X'>Crédito 2X</option>
+					<option value='Crédito 3X'>Crédito 3X</option>
+        		</select>
             </div>
 			<div id='butttons'>
 				<button id='apagar'>APAGAR</button>
@@ -47,7 +54,7 @@
 	<!--POPPUP QUA APARECE ANTES DE FECHAR O SITE-->
 	<dialog id="saindoDoSite">
 		<div id="mensagem">
-			<p>Você saiu do site.</p>
+			<h1>Você saiu do site.</h1>
 		</div>
 	</dialog>
 	<!----------------------TOPO DO SITE----------------------------->
@@ -59,10 +66,10 @@
 			<h1>CUSTOMER PAYMENT RECORD</h1>
 		</div>
 		<div id="infoPessoais">
-			<label><h3>Nome:&nbsp</h3>Jobson de oliveira coutinho</label>
-			<label><h3>Login:&nbsp</h3>Jobson Oliveira</label>
-			<label><h3>Data de nascimento:&nbsp</h3>05/06/2001</label>
-			<label><h3>Gênero:&nbsp</h3>Masculino</label>
+			<label><h3>Nome:&nbsp</h3></label>
+			<label><h3>Login:&nbsp</h3></label>
+			<label><h3>Data de nascimento:&nbsp</h3></label>
+			<label><h3>Gênero:&nbsp</h3></label>
 		</div>
 		<div id="buttonSair"><button id="sair"><img src="https://cdn-icons-png.flaticon.com/128/660/660350.png" alt=""></button></div>
 	</div>
@@ -81,7 +88,6 @@
 						<th id="opcoes">Opções:</th>
 					</theade>
 					<tbody id="tbody">
-						
 					</tbody>
 			</table>
 		</div>

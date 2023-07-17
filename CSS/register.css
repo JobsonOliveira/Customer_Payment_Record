@@ -3,166 +3,332 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family:'DM Serif Text', 'Arial';
-    display: flex;
-    background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
-    justify-content: center;
-    padding-top: 2%;
-}
-/*Menságem de sucesso*/
-#mensagemDeSucesso{
-    background-color: rgba(255, 255, 255);
-    position: absolute;
-    text-align: center;
-    color: #0b940b;
-    width: 75vh;
-    height: 11vh;
-    border-radius: 5px;
-    font-size: 3vh;
-    /*top: 6%;
-    transform: translate(0 -5%);*/
-    border: 2px solid #000;
-}
-/*BOX CONTENDO TODOS OS DADOS*/
-#box{
-    display: grid;
-    background: rgba(255, 255, 255, 0.1);
-    width: 80vh;
-    border-radius: 15px;
-    border: 2px solid #0353ffda;
-}
-/*TOPO DO SITE, CONTEM O TÍTULO DO SITE*/
-#top{
-    text-align: center;
-    padding-top: 1vh;
-    height: 15vh;
-}
-/*NOME 'PÁGINA DE REGISTRO'*/
-#top h2{
-    margin-top: 1vh;
-}
-/*MEIO DO SITE, CONTEM AS ENTRADAS DE DADOS*/
-#main{
-    display: grid;
-    justify-content: center;
-    height: 60vh;
-}
-/*INPUTS, ENTRADAS DOS DADOS*/
-#main input#nome,
-input#sobrenome,
-input#login,
-input#senha{
-    background: none;
-    border: none;
-    border-bottom: 1px solid #000;
-    font-size: 25px;
-    outline: 0;
-    width: 70vh;
-    height: 7vh;
-    color: #090081;
-}
-/*OS NOMES DOS CAMPOS QUE DEVEM SER PREENCHIDOS*/
-label#Labelnome,
-label#Labelsobrenome,
-label#Labellogin,
-label#Labelsenha{
-    position: relative;
-    top: -100%;
-    font-size: 3.5vh;
-    width: 20vh;
-    height: 4vh;
-    transition: 1s;
-    pointer-events: none;
-}
-/*ANIMAÇÃO PARA O LABEL 'NOME'*/
-input#nome:focus ~ label#Labelnome,
-input#nome:valid ~ label#Labelnome{
-    top: -10vh;
-    color: transparent;
-}
-/*ANIMAÇÃO PARA O LABEL 'SOBRENOME'*/
-input#sobrenome:focus ~ label#Labelsobrenome,
-input#sobrenome:valid ~ label#Labelsobrenome{
-    top: -10vh;
-    color: transparent;
-}
-/*ANIMAÇÃO PARA O LABEL 'LOGIN'*/
-input#login:focus ~ label#Labellogin,
-input#login:valid ~ label#Labellogin{
-    top: -10vh;
-    color: transparent;
-}
-/*ANIMAÇÃO PARA O LABEL 'SENHA'*/
-input#senha:focus ~ label#Labelsenha,
-input#senha:valid ~ label#Labelsenha{
-    top: -10vh;
-    color: transparent;
-}
-/*DIV COM DATA DE NASCIMENTO E GÊNERO*/
-div#Dnasc_Genero{
-    display: grid;
-    column-gap: 10vh;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    padding: 1vh;
-}
-/*LABEL DA 'DATA DE NASCIMENTO' E DO 'GÊNERO'*/
-label#LabelDatNasc,
-label#LabelGenero{
-    font-size: 3.5vh;
-}
-/*INPUT DATA DE NASCIMENTO*/
-div#Dnasc_Genero input,
-div#Dnasc_Genero select{
-    background: none;
-    border: 1px solid #0353ffda;
-    border-radius: 10px;
-    width: 30vh;
-    font-size: 2.5vh;
-}
-/*RODAPÉ DO SITE*/
-div#footer{
-    height: 15vh;
-    display: grid;
-    padding: 1vh;
-    justify-content: center;
-    text-align: center;
-}
-/*BOTÃO DE SE REGISTRAR*/
-div#footer button{
-    border-radius: 50px;
-    width: 40vh;
-   height: 8vh;
-   background: linear-gradient(to left, #0099ff, #01fdbe);
-    font-size: 5vh;
-    transition: .5s;
-    border: none;
-    display: flex;
-justify-content: center;
-align-items: center;
-}
-/*INTERAÇÃO DO BOTÃO CM O USUÁRIO*/
-button#btnCadastra:focus,
-button#btnCadastra:hover{
-    background: linear-gradient(to left, #ffe600, #01fdbe);
-    animation: btncor 1s infinite linear;
-}
-/*KEYFRAME DE INTERAÇÃ DO BOTÃO*/
-@keyframes btncor {
-    from{
-        color: transparent;
-        border: 1px solid #fff;
-    }
-    50%{
-        color: #fff;
-        border: 1px solid #000;
-    }
-    to{
-        color: transparent;
-        border: 1px solid #fff;
-    }
-}
 a{
     color: blue;
+}
+@media (min-width: 566px) and (max-width: 2000px){
+    body{
+        font-family:'DM Serif Text', 'Arial';
+        display: flex;
+        background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
+        justify-content: center;
+        padding-top: 2%;
+    }
+    /*Menságem de sucesso*/
+    #mensagemDeSucesso{
+        background-color: rgba(255, 255, 255);
+        position: absolute;
+        text-align: center;
+        color: #0b940b;
+        width: 75vh;
+        height: 11vh;
+        border-radius: 5px;
+        font-size: 3vh;
+        /*top: 6%;
+        transform: translate(0 -5%);*/
+        border: 2px solid #000;
+    }
+    /*BOX CONTENDO TODOS OS DADOS*/
+    #box{
+        display: grid;
+        background: rgba(255, 255, 255, 0.1);
+        width: 80vh;
+        border-radius: 15px;
+        border: 2px solid #0353ffda;
+    }
+    /*TOPO DO SITE, CONTEM O TÍTULO DO SITE*/
+    #top{
+        text-align: center;
+        padding-top: 1vh;
+        height: 15vh;
+    }
+    /*NOME 'PÁGINA DE REGISTRO'*/
+    #top h2{
+        margin-top: 1vh;
+    }
+    /*MEIO DO SITE, CONTEM AS ENTRADAS DE DADOS*/
+    #main{
+        display: grid;
+        justify-content: center;
+        height: 60vh;
+    }
+    /*INPUTS, ENTRADAS DOS DADOS*/
+    #main input#nome,
+    input#sobrenome,
+    input#login,
+    input#senha{
+        background: none;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 25px;
+        outline: 0;
+        width: 70vh;
+        height: 7vh;
+        color: #090081;
+    }
+    /*OS NOMES DOS CAMPOS QUE DEVEM SER PREENCHIDOS*/
+    label#Labelnome,
+    label#Labelsobrenome,
+    label#Labellogin,
+    label#Labelsenha{
+        position: relative;
+        top: -100%;
+        font-size: 3.5vh;
+        width: 20vh;
+        height: 4vh;
+        transition: 1s;
+        pointer-events: none;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'NOME'*/
+    input#nome:focus ~ label#Labelnome,
+    input#nome:valid ~ label#Labelnome{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'SOBRENOME'*/
+    input#sobrenome:focus ~ label#Labelsobrenome,
+    input#sobrenome:valid ~ label#Labelsobrenome{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'LOGIN'*/
+    input#login:focus ~ label#Labellogin,
+    input#login:valid ~ label#Labellogin{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'SENHA'*/
+    input#senha:focus ~ label#Labelsenha,
+    input#senha:valid ~ label#Labelsenha{
+        top: -10vh;
+        color: transparent;
+    }
+    /*DIV COM DATA DE NASCIMENTO E GÊNERO*/
+    div#Dnasc_Genero{
+        display: grid;
+        column-gap: 10vh;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        padding: 1vh;
+    }
+    /*LABEL DA 'DATA DE NASCIMENTO' E DO 'GÊNERO'*/
+    label#LabelDatNasc,
+    label#LabelGenero{
+        font-size: 3.5vh;
+    }
+    /*INPUT DATA DE NASCIMENTO*/
+    div#Dnasc_Genero input,
+    div#Dnasc_Genero select{
+        background: none;
+        border: 1px solid #0353ffda;
+        border-radius: 10px;
+        width: 30vh;
+        font-size: 2.5vh;
+    }
+    /*RODAPÉ DO SITE*/
+    div#footer{
+        height: 15vh;
+        display: grid;
+        padding: 1vh;
+        justify-content: center;
+        text-align: center;
+    }
+    /*BOTÃO DE SE REGISTRAR*/
+    div#footer button{
+        border-radius: 50px;
+        width: 40vh;
+       height: 8vh;
+       background: linear-gradient(to left, #0099ff, #01fdbe);
+        font-size: 5vh;
+        transition: .5s;
+        border: none;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    /*INTERAÇÃO DO BOTÃO CM O USUÁRIO*/
+    button#btnCadastra:focus,
+    button#btnCadastra:hover{
+        background: linear-gradient(to left, #ffe600, #01fdbe);
+        animation: btncor 1s infinite linear;
+    }
+    /*KEYFRAME DE INTERAÇÃ DO BOTÃO*/
+    @keyframes btncor {
+        from{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+        50%{
+            color: #fff;
+            border: 1px solid #000;
+        }
+        to{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+    }
+}
+@media (min-width: 100px) and (max-width: 565px){
+    body{
+        font-family:'DM Serif Text', 'Arial';
+        display: flex;
+        background: linear-gradient(to left, rgba(10, 10, 10, 0.589), rgba(0, 119, 255, 0.589));
+        justify-content: center;
+        padding-top: 2%;
+    }
+    /*Menságem de sucesso*/
+    #mensagemDeSucesso{
+        background-color: rgba(255, 255, 255);
+        position: absolute;
+        text-align: center;
+        color: #0b940b;
+        width: 60vh;
+        height: 11vh;
+        border-radius: 5px;
+        font-size: 2vh;
+        border: 2px solid #000;
+    }
+    /*BOX CONTENDO TODOS OS DADOS*/
+    #box{
+        display: grid;
+        background: rgba(255, 255, 255, 0.1);
+        width: 60vh;
+        border-radius: 15px;
+        border: 2px solid #0353ffda;
+    }
+    /*TOPO DO SITE, CONTEM O TÍTULO DO SITE*/
+    #top{
+        text-align: center;
+        padding-top: 1vh;
+        height: 13vh;
+        font-size: 2vh;
+    }
+    /*NOME 'PÁGINA DE REGISTRO'*/
+    #top h2{
+        margin-top: 1vh;
+    }
+    /*MEIO DO SITE, CONTEM AS ENTRADAS DE DADOS*/
+    #main{
+        display: grid;
+        justify-content: center;
+        height: 60vh;
+    }
+    /*INPUTS, ENTRADAS DOS DADOS*/
+    #main input#nome,
+    input#sobrenome,
+    input#login,
+    input#senha{
+        margin-left: 3%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 3.5vh;
+        outline: 0;
+        width: 50vh;
+        height: 5vh;
+        color: #090081;
+    }
+    /*OS NOMES DOS CAMPOS QUE DEVEM SER PREENCHIDOS*/
+    label#Labelnome,
+    label#Labelsobrenome,
+    label#Labellogin,
+    label#Labelsenha{
+        position: relative;
+        top: -100%;
+        font-size: 3.5vh;
+        width: 20vh;
+        height: 4vh;
+        transition: 1s;
+        pointer-events: none;
+        margin-left: 3%;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'NOME'*/
+    input#nome:focus ~ label#Labelnome,
+    input#nome:valid ~ label#Labelnome{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'SOBRENOME'*/
+    input#sobrenome:focus ~ label#Labelsobrenome,
+    input#sobrenome:valid ~ label#Labelsobrenome{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'LOGIN'*/
+    input#login:focus ~ label#Labellogin,
+    input#login:valid ~ label#Labellogin{
+        top: -10vh;
+        color: transparent;
+    }
+    /*ANIMAÇÃO PARA O LABEL 'SENHA'*/
+    input#senha:focus ~ label#Labelsenha,
+    input#senha:valid ~ label#Labelsenha{
+        top: -10vh;
+        color: transparent;
+    }
+    /*DIV COM DATA DE NASCIMENTO E GÊNERO*/
+    div#Dnasc_Genero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        margin-left: 5%;
+        width: 49vh;
+    }
+    /*LABEL DA 'DATA DE NASCIMENTO' E DO 'GÊNERO'*/
+    label#LabelDatNasc,
+    label#LabelGenero{
+        font-size: 2.7vh;
+    }
+    /*INPUT DATA DE NASCIMENTO*/
+    div#Dnasc_Genero input,
+    div#Dnasc_Genero select{
+        background: none;
+        border: 1px solid #0353ffda;
+        border-radius: 10px;
+        width: 20vh;
+        font-size: 2.2vh;
+        margin-left: 2vh;
+    }
+    /*RODAPÉ DO SITE*/
+    div#footer{
+        height: 15vh;
+        display: grid;
+        padding: 1vh;
+        justify-content: center;
+        text-align: center;
+    }
+    /*BOTÃO DE SE REGISTRAR*/
+    div#footer button{
+        border-radius: 50px;
+        width: 30vh;
+       height: 6vh;
+       background: linear-gradient(to left, #0099ff, #01fdbe);
+        font-size: 3.5vh;
+        transition: .5s;
+        border: none;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    /*INTERAÇÃO DO BOTÃO CM O USUÁRIO*/
+    button#btnCadastra:focus,
+    button#btnCadastra:hover{
+        background: linear-gradient(to left, #ffe600, #01fdbe);
+        animation: btncor 1s infinite linear;
+    }
+    /*KEYFRAME DE INTERAÇÃ DO BOTÃO*/
+    @keyframes btncor {
+        from{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+        50%{
+            color: #fff;
+            border: 1px solid #000;
+        }
+        to{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+    }
 }
