@@ -6,7 +6,7 @@
 a{
     color: blue;
 }
-@media (min-width: 566px) and (max-width: 2000px){
+@media (min-width: 641px) and (max-width: 2000px){
 dialog#bemVindo{
     position: absolute;
     top: 1%;
@@ -182,7 +182,7 @@ p{
 }
 }
 
-@media (min-width: 100px) and (max-width: 565px){
+@media (min-width: 100px) and (max-width: 640px){
     dialog#bemVindo{
         position: absolute;
         top: 1%;
