@@ -6,7 +6,7 @@
 a{
     color: blue;
 }
-@media (min-width: 651px) and (max-width: 2000px){
+@media (min-width: 566px) and (max-width: 2000px){
 dialog#bemVindo{
     position: absolute;
     top: 1%;
@@ -182,7 +182,7 @@ p{
 }
 }
 
-@media (min-width: 0px) and (max-width: 650px){
+@media (min-width: 100px) and (max-width: 565px){
     dialog#bemVindo{
         position: absolute;
         top: 1%;
@@ -237,13 +237,13 @@ p{
         top: 20%;
         display: flex;
         gap: 1vh;
-        width: 74vh;
+        width: 60vh;
         padding: 1vh;
     }
     /*AREA ONDE TEM A LOGO E A MENSAGEM DE BOAS VINDAS*/
     #boasVindas{
         display: grid;
-        width: 21.5vh;
+        width: 16.5vh;
         background-color: rgba(255, 255, 255, 0.1);
         border: 2px solid #0353ffda;
         border-radius: 15px;
@@ -251,21 +251,21 @@ p{
     }
     /*AREA DA LOGO DO Customer Payment Record*/
     div#logo{
-        width: 20vh;
-        height: 18vh;
+        width: 15vh;
+        height: 14vh;
         border-radius: 15px;
     }
     /*IMAGEM DA LOGO DO Customer Payment Record*/
     div#logo img{
-        height: 18vh;
-        width: 20vh;
+        height: 14vh;
+        width: 15vh;
         border-radius: 15px;
         border: 2px solid #0353ffda;
     }
     /*DIV PARA A MENSAGEM DE BOAS VINDAS*/
     div#mensagemBoasVindas{
         margin-top: 1vh;
-        width: 20vh;
+        width: 15vh;
         border-radius: 15px;
         padding: 2px;
     }
@@ -273,14 +273,14 @@ p{
     div#mensagemBoasVindas h3, h4{
         text-align: justify;
         text-align: center;
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     /*DIV DA ENTRADA DOS DADPOS PARA LOGIN*/
     div#entrada{
         display: grid;
         border: 2px solid #0353ffda;
         border-radius: 15px;
-        width: 50vh;
+        width: 45vh;
     }
     /*DIV COM NOME DO SITE*/
     div#NomeDoSite{
@@ -288,24 +288,24 @@ p{
         height: 7vh;
         top: 3vh;
         text-align: center;
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     /*DIV DO MEIO, POSSUI AS ESTRADAS DOS DADOS PARA LOGIN*/
     div#entradasDeDados{
         display: grid;
         justify-content: center;
-        height: 40vh;
+        height: 30vh;
     }
     /*INPUTs ONDE ENTRA OS DADOS*/
     div#entradasDeDados input{
-        height: 30px;
-        width: 300px;
+        height: 4vh;
+        width: 30vh;
         position: relative;
         top: 100%;
         background: none;
         border: none;
         border-bottom: 1px solid #000;
-        font-size: 4vh;
+        font-size: 3vh;
         text-align: center;
         outline: 0;
     }
@@ -313,8 +313,8 @@ p{
     label{
         position: relative;
         width: 7vh;
-        top: 1vh;
-        font-size: 3vh;
+        top: 1.1vh;
+        font-size: 2.5vh;
         transition: 1s;
         pointer-events: none;
     }
@@ -340,11 +340,11 @@ p{
     /*BOTÃO PARA ENTRAR NO SITE*/
     button{
         border-radius: 50px;
-        width: 30vh;
-        height: 6vh;
+        width: 20vh;
+        height: 4vh;
         position: relative;
         background: linear-gradient(to left, #0099ff, #01fdbe);
-        font-size: 3.5vh;
+        font-size: 2.5vh;
         transition: .5s;
         border: none;
     }
@@ -357,6 +357,6 @@ p{
     /*CONVITE E LINK PARA SE REGISTRAR*/
     p{
         position: relative;
-        font-size: 2.5vh;
+        font-size: 1.5vh;
     }
 }

@@ -172,7 +172,7 @@ a{
     body{
         font-family:'DM Serif Text', 'Arial';
         display: flex;
-        background: linear-gradient(to left, rgba(10, 10, 10, 0.589), rgba(0, 119, 255, 0.589));
+        background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
         justify-content: center;
         padding-top: 2%;
     }
