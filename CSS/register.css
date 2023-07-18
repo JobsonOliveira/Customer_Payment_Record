@@ -7,6 +7,31 @@ a{
     color: blue;
 }
 @media (min-width: 566px) and (max-width: 2000px){
+    dialog#registrado{
+        position: absolute;
+        top: 1%;
+        left: 40%;
+        transform: translate(-50% -27%);
+        font-size: 1.5vh;
+        background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
+        border-radius: 15px;
+        padding: 1vh;
+        transition: 1s;
+        border: 2px solid #0353ffda;
+        animation: mover .3s;
+    }
+    @keyframes mover {
+        from{
+            top: -15%;
+            left: 40%;
+            transform: translate(-50% -27%);
+        }
+        to{
+            top: 1%;
+            left: 40%;
+            transform: translate(-50% -27%);
+        }
+    }
     body{
         font-family:'DM Serif Text', 'Arial';
         display: flex;
@@ -169,6 +194,31 @@ a{
     }
 }
 @media (min-width: 100px) and (max-width: 565px){
+    dialog#registrado{
+        position: absolute;
+        top: 1%;
+        left: 30%;
+        transform: translate(-50% -27%);
+        font-size: 1.5vh;
+        background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
+        border-radius: 15px;
+        padding: 1vh;
+        transition: 1s;
+        border: 2px solid #0353ffda;
+        animation: mover .3s;
+    }
+    @keyframes mover {
+        from{
+            top: -15%;
+            left: 30%;
+            transform: translate(-50% -27%);
+        }
+        to{
+            top: 1%;
+            left: 30%;
+            transform: translate(-50% -27%);
+        }
+    }
     body{
         font-family:'DM Serif Text', 'Arial';
         display: flex;

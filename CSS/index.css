@@ -186,8 +186,9 @@ p{
     dialog#bemVindo{
         position: absolute;
         top: 1%;
-        left: 27%;
+        left: 40%;
         transform: translate(-50% -27%);
+        font-size: 1.5vh;
         background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
         border-radius: 15px;
         padding: 1vh;
@@ -198,12 +199,12 @@ p{
     @keyframes mover {
         from{
             top: -15%;
-            left: 27%;
+            left: 40%;
             transform: translate(-50% -27%);
         }
         to{
             top: 1%;
-            left: 27%;
+            left: 40%;
             transform: translate(-50% -27%);
         }
     }

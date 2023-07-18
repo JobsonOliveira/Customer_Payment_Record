@@ -8,14 +8,11 @@ document.querySelector('#btnCadastra').addEventListener('click', () => {
     if((Nome.value == "") || (Sobrenome.value == "") || (Login.value == "") || (Senha.value == "") || (DataNascimento.value == "")){
        alert('Verifique se todas as informações foram fornecidas corretamente!');
     }else{
-        let body = document.querySelector("body");
-        body.innerHTML += "<div id='mensagemDeSucesso'><h2>Cadastro realizado com sucesso!</h2><h3>Você será redirecionado para a página de login.</h3></div>"
-        document.querySelector("#box").style.opacity = "20%";
-        
-        setTimeout(() =>{
-            document.querySelector('#mensagemDeSucesso').remove();
-            document.querySelector("#box").style.opacity = "100%";
+        let registrado = document.querySelector('#registrado');
+        registrado.show();
+        setTimeout(()=> {
+            registrado.close();
             window.open('../index.html', '_self');
-       }, "2000")
+        }, '1000');
     }
 });
