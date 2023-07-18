@@ -10,8 +10,8 @@ a{
     dialog#registrado{
         position: absolute;
         top: 1%;
-        left: 42%;
-        transform: translate(-50% -27%);
+        margin-left: 50%;
+        transform: translate(-50%);
         font-size: 1.5vh;
         background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
         border-radius: 15px;
@@ -23,12 +23,10 @@ a{
     @keyframes mover {
         from{
             top: -15%;
-            left: 40%;
             transform: translate(-50% -27%);
         }
         to{
             top: 1%;
-            left: 40%;
             transform: translate(-50% -27%);
         }
     }
@@ -197,8 +195,8 @@ a{
     dialog#registrado{
         position: absolute;
         top: 1%;
-        left: 30%;
-        transform: translate(-50% -27%);
+        margin-left: 50%;
+        transform: translate(-50%);
         font-size: 1.5vh;
         background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
         border-radius: 15px;
@@ -210,13 +208,11 @@ a{
     @keyframes mover {
         from{
             top: -15%;
-            left: 30%;
-            transform: translate(-50% -27%);
+            transform: translate(-50%);
         }
         to{
             top: 1%;
-            left: 30%;
-            transform: translate(-50% -27%);
+            transform: translate(-50%);
         }
     }
     body{

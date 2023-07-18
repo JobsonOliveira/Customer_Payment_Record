@@ -186,8 +186,8 @@ p{
     dialog#bemVindo{
         position: absolute;
         top: 1%;
-        left: 40%;
-        transform: translate(-50% -27%);
+        margin-left: 50%;
+        transform: translate(-50%);
         font-size: 1.5vh;
         background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
         border-radius: 15px;
@@ -199,13 +199,11 @@ p{
     @keyframes mover {
         from{
             top: -15%;
-            left: 40%;
-            transform: translate(-50% -27%);
+            transform: translate(-50%);
         }
         to{
             top: 1%;
-            left: 40%;
-            transform: translate(-50% -27%);
+            transform: translate(-50%);
         }
     }
     /*ANIMAÇÃO PARA PISCAR*/

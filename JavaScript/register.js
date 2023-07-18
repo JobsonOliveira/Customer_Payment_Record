@@ -1,4 +1,4 @@
-    document.querySelector('#btnCadastra').addEventListener('click', () => {
+document.querySelector('#btnCadastra').addEventListener('click', () => {
     let Nome = document.querySelector('#nome');
     let Sobrenome = document.querySelector('#sobrenome');
     let Login = document.querySelector('#login');
