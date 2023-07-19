@@ -871,8 +871,8 @@ dialog#dialogAddPag{
     background: linear-gradient(to left, rgb(167, 255, 181), rgb(127, 187, 255));
     position: absolute;
     top: 10%;
-    margin-left: 20%;
-    transform: translate(-10%);
+    left: 1%;
+    transform: translate(-10% -1%);
     border: 1px solid #0353ffda;background-color: red;
     border-radius: 15px;
 }
