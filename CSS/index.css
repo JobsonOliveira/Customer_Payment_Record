@@ -477,7 +477,7 @@ p{
     /*INPUTs ONDE ENTRA OS DADOS*/
     div#entradasDeDados input{
         height: 4vh;
-        width: 30vh;
+        width: 100%;
         position: relative;
         top: 100%;
         background: none;
@@ -519,10 +519,10 @@ p{
     button{
         border-radius: 50px;
         width: 85%;
-        height: 50%;
+        height: 8vh;
         position: relative;
         background: linear-gradient(to left, #0099ff, #01fdbe);
-        font-size: 100%;
+        font-size: 3vh;
         transition: .5s;
         border: none;
     }
@@ -535,6 +535,7 @@ p{
     /*CONVITE E LINK PARA SE REGISTRAR*/
     p{
         position: relative;
-        font-size: 80%;
+        font-size: 100%;
+        margin-top: 1vh;
     }
 }
