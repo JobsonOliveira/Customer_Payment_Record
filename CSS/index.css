@@ -413,13 +413,13 @@ p{
         top: 20%;
         display: flex;
         gap: 1vh;
-        width: 80%;
+        width: 95%;
         padding: 1vh;
     }
     /*AREA ONDE TEM A LOGO E A MENSAGEM DE BOAS VINDAS*/
     #boasVindas{
         display: grid;
-        width: 29%;
+        width: 50%;
         background-color: rgba(255, 255, 255, 0.1);
         border: 2px solid #0353ffda;
         border-radius: 15px;
@@ -427,9 +427,11 @@ p{
     }
     /*AREA DA LOGO DO Customer Payment Record*/
     div#logo{
-        width: 100%;
-        height: 85%;
+        width: 100%;background-color: rgb(255, 8, 0);
+        height: 100%;
         border-radius: 15px;
+        display: flex;
+        justify-content: center;
     }
     /*IMAGEM DA LOGO DO Customer Payment Record*/
     div#logo img{
@@ -449,14 +451,14 @@ p{
     div#mensagemBoasVindas h3, h4{
         text-align: justify;
         text-align: center;
-        font-size: 55%;
+        font-size: 75%;
     }
     /*DIV DA ENTRADA DOS DADPOS PARA LOGIN*/
     div#entrada{
         display: grid;
         border: 2px solid #0353ffda;
         border-radius: 15px;
-        width: 70%;
+        width: 100%;
     }
     /*DIV COM NOME DO SITE*/
     div#NomeDoSite{
@@ -464,7 +466,7 @@ p{
         height: 7vh;
         top: 3vh;
         text-align: center;
-        font-size: 55%;
+        font-size: 70%;
     }
     /*DIV DO MEIO, POSSUI AS ESTRADAS DOS DADOS PARA LOGIN*/
     div#entradasDeDados{
@@ -516,11 +518,11 @@ p{
     /*BOTÃO PARA ENTRAR NO SITE*/
     button{
         border-radius: 50px;
-        width: 20vh;
-        height: 4vh;
+        width: 85%;
+        height: 50%;
         position: relative;
         background: linear-gradient(to left, #0099ff, #01fdbe);
-        font-size: 2.5vh;
+        font-size: 100%;
         transition: .5s;
         border: none;
     }
@@ -533,6 +535,6 @@ p{
     /*CONVITE E LINK PARA SE REGISTRAR*/
     p{
         position: relative;
-        font-size: 1.5vh;
+        font-size: 80%;
     }
 }
