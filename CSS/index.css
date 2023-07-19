@@ -472,8 +472,8 @@ p{
     div#entradasDeDados{
         display: grid;
         justify-content: center;
-        height: 30vh;
-        margin-top: -6vh ;
+        gap: 0px;
+        height: 80%;
     }
     /*INPUTs ONDE ENTRA OS DADOS*/
     div#entradasDeDados input{
@@ -515,7 +515,6 @@ p{
         flex-direction: column;
         align-items: center;
         padding-top: 2vh;
-        margin-top: -10vh;
     }
     /*BOTÃO PARA ENTRAR NO SITE*/
     button{
