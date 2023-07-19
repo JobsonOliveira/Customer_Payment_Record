@@ -962,6 +962,7 @@ div#topo{
 	display: grid;
 	grid-template-columns: 4fr 1fr;
 	border-bottom: 2px solid #000;
+    width: 100%;
 }
 /*DIV COM A LOGO DO SITE*/
 div#logo{
@@ -975,13 +976,14 @@ div#logo img{
 /*NOME DO SITE*/
 div#nomeSite{
 	text-align: center;
-	max-width: 80vh;
+	width: 100%;
 	grid-row: 1;
 	font-size: 1em;
 	padding-top: 5vh;
 }
 /*DIV COM AS INFORMAÇÕES PESSOAIS E O BOTÃO DE SAÍDA*/
 div#infoPessoais{
+    width: 100%;
 	padding: 2vh;
 	border-top: 1px solid #000;
 	border-right: 1px solid #000;
@@ -1042,7 +1044,7 @@ div#pagamentos{
     justify-content: center;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    max-width: 99%;
+    max-width: 97.5%;
     height: 91%;
     margin-left: 1vh;
     border: 2px solid #000;
@@ -1051,7 +1053,7 @@ div#pagamentos{
 }
 /*TABELA DE PAGAMENTOS*/
 table#tablePagamentos{
-    width: 99%;
+    width: 100%;
     height: 3vh;
 }
 /*LINHA DA TABELA DE PAGAMENTOS*/
@@ -1060,12 +1062,12 @@ table th{
 	border: 1px solid #000;
 	font-weight: bold;
 	text-align: center;
-	font-size: 2vh;
+	font-size: 1.5vh;
 }
 tbody td{
 	border: 1px solid #000;
-    	text-align: center;
-    	font-size: 1.5vh;
+    text-align: center;
+    font-size: 1.5vh;
 }
 tbody td img{
     width: 20px;
