@@ -182,7 +182,7 @@ p{
 }
 }
 
-@media (min-width: 100px) and (max-width: 640px){
+@media (min-width: 541px) and (max-width: 640px){
     dialog#bemVindo{
         position: absolute;
         top: 1%;
@@ -288,6 +288,183 @@ p{
         top: 3vh;
         text-align: center;
         font-size: 1.5vh;
+    }
+    /*DIV DO MEIO, POSSUI AS ESTRADAS DOS DADOS PARA LOGIN*/
+    div#entradasDeDados{
+        display: grid;
+        justify-content: center;
+        height: 30vh;
+    }
+    /*INPUTs ONDE ENTRA OS DADOS*/
+    div#entradasDeDados input{
+        height: 4vh;
+        width: 30vh;
+        position: relative;
+        top: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 3vh;
+        text-align: center;
+        outline: 0;
+    }
+    /*LABEL DE LOGIN*/
+    label{
+        position: relative;
+        width: 7vh;
+        top: 1.1vh;
+        font-size: 2.5vh;
+        transition: 1s;
+        pointer-events: none;
+    }
+    /*LABEL DE LOGIN RELACIONADO AO CLICK NO INPUT*/
+    input#login:focus ~ #Labellogin,
+     input#login:valid ~ #Labellogin{
+        top: -5vh;
+        color: transparent;
+     }
+     /*LABEL DE LOGIN RELACIONADO AO CLICK NO INPUT*/
+    input#senha:focus ~ #Labelsenha,
+    input#senha:valid ~ #Labelsenha{
+       top: -5vh;
+       color: transparent;
+    }
+    /*DIV COM BOTÃO DE ENTRADA NO SITE E REDIRECIONAMENTO PARA REGISTRO*/
+    div#BotaoERedirecionamento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2vh;
+    }
+    /*BOTÃO PARA ENTRAR NO SITE*/
+    button{
+        border-radius: 50px;
+        width: 20vh;
+        height: 4vh;
+        position: relative;
+        background: linear-gradient(to left, #0099ff, #01fdbe);
+        font-size: 2.5vh;
+        transition: .5s;
+        border: none;
+    }
+    /*INTERAÇÃO DO BOTÃO CM O USUÁRIO*/
+    button:focus,
+    button:hover{
+        background: linear-gradient(to left, #ffe600, #01fdbe);
+        animation: btncor 1s infinite linear;
+    }
+    /*CONVITE E LINK PARA SE REGISTRAR*/
+    p{
+        position: relative;
+        font-size: 1.5vh;
+    }
+}
+@media (min-width: 100px) and (max-width: 540px){
+    dialog#bemVindo{
+        position: absolute;
+        top: 1%;
+        margin-left: 50%;
+        transform: translate(-50%);
+        font-size: 1.5vh;
+        background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
+        border-radius: 15px;
+        padding: 1vh;
+        transition: 1s;
+        border: 2px solid #0353ffda;
+        animation: mover .3s;
+    }
+    @keyframes mover {
+        from{
+            top: -15%;
+            transform: translate(-50%);
+        }
+        to{
+            top: 1%;
+            transform: translate(-50%);
+        }
+    }
+    /*ANIMAÇÃO PARA PISCAR*/
+    @keyframes btncor {
+        from{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+        50%{
+            color: #fff;
+            border: 1px solid #000;
+        }
+        to{
+            color: transparent;
+            border: 1px solid #fff;
+        }
+    }
+    
+        /*TODA A PÁGINA*/
+    body{
+        font-family:'DM Serif Text', 'Arial';
+        display: flex;
+        background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
+        justify-content: center;
+        padding-top: 5%;
+    }
+    /*AREA QUE ENVOLVE A PARTE DE BOAS VINDAS E A DE LOGIN*/
+    #log{
+        position: absolute;
+        top: 20%;
+        display: flex;
+        gap: 1vh;
+        width: 80%;
+        padding: 1vh;
+    }
+    /*AREA ONDE TEM A LOGO E A MENSAGEM DE BOAS VINDAS*/
+    #boasVindas{
+        display: grid;
+        width: 29%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid #0353ffda;
+        border-radius: 15px;
+        padding: 3px;
+    }
+    /*AREA DA LOGO DO Customer Payment Record*/
+    div#logo{
+        width: 100%;
+        height: 85%;
+        border-radius: 15px;
+    }
+    /*IMAGEM DA LOGO DO Customer Payment Record*/
+    div#logo img{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        border: 2px solid #0353ffda;
+    }
+    /*DIV PARA A MENSAGEM DE BOAS VINDAS*/
+    div#mensagemBoasVindas{
+        margin-top: 1vh;
+        width: 100%;
+        border-radius: 15px;
+        padding: 2px;
+    }
+    /*MESÁGEM DE BOAS VINDAS*/
+    div#mensagemBoasVindas h3, h4{
+        text-align: justify;
+        text-align: center;
+        font-size: 55%;
+    }
+    /*DIV DA ENTRADA DOS DADPOS PARA LOGIN*/
+    div#entrada{
+        display: grid;
+        border: 2px solid #0353ffda;
+        border-radius: 15px;
+        width: 70%;
+    }
+    /*DIV COM NOME DO SITE*/
+    div#NomeDoSite{
+        position: relative;
+        height: 7vh;
+        top: 3vh;
+        text-align: center;
+        font-size: 55%;
     }
     /*DIV DO MEIO, POSSUI AS ESTRADAS DOS DADOS PARA LOGIN*/
     div#entradasDeDados{

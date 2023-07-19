@@ -854,7 +854,7 @@ dialog#saindoDoSite{
     padding: 1vh;
     border: 2px solid #0353ffda;
     animation: mover .3s;
-    font-size: 2vh;
+    font-size: 1vh;
 }
 @keyframes mover {
     from{
