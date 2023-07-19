@@ -184,7 +184,7 @@ class adicionarPagamento{
     document.querySelector('#forma').value = pagamento.Forma;
 
     //MUDAR O NOME DO BOTÃO PARA "Atualizar"
-    document.querySelector('#salvar').innerHTML = 'Atualizar';
+    document.querySelector('#salvar').innerHTML = 'ATUALIZAR';
 
 }
    limpar(){
@@ -193,7 +193,6 @@ class adicionarPagamento{
        document.querySelector('#vencimento').value = '';
        document.querySelector('#pagamento').value = '';
        document.querySelector('#valor').value = '';
-       document.querySelector('#forma').value = '';
    
        this.editId = null;
        

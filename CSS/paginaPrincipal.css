@@ -848,7 +848,7 @@ dialog#saindoDoSite{
     position: absolute;
     top: 1%;
     margin-left: 50%;
-transform: translate(-50%);
+    transform: translate(-50%);
     background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
     border-radius: 15px;
     padding: 1vh;
@@ -871,9 +871,9 @@ dialog#dialogAddPag{
     background: linear-gradient(to left, rgb(167, 255, 181), rgb(127, 187, 255));
     position: absolute;
     top: 10%;
-    left: 20%;
-    transform: translate(-10% -20%);
-    border: 1px solid #0353ffda;
+    margin-left: 20%;
+    transform: translate(-10%);
+    border: 1px solid #0353ffda;background-color: red;
     border-radius: 15px;
 }
 /*DIV TRONCO DO POPPUP PARA ADICIONAR PAGAMENTO*/
@@ -923,15 +923,19 @@ div#butttons{
     margin-top: 5vh;
     padding: 1vh;
     text-align: center;
+    display: grid;
+    justify-content: center;
+    gap: 1vh;
 }
 /*BUTTONs "APAGAR" E "SALVAR"*/
 div#butttons button{
-    width: 25vh;
-    height: 5vh;
+    width: 40vh;
+    height: 6vh;
     border-radius: 15px;
     cursor: pointer;
     background: linear-gradient(to left, #0099ff, #01fdbe);
     border: 1px solid #000;
+    font-size: 3vh;
 }
 /*ANIMAÇÃO QUANDO OS BUTTONs FORAM CLICADOS*/
 div#butttons button:hover{
