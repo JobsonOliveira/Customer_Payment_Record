@@ -1,8 +1,12 @@
 //EVENTO PARA O BUTTON ABRIR O POPPUT PARA ADCICIONAR UM NOVO PAGAMENTO
 let modal = document.querySelector("#dialogAddPag");
 document.querySelector('#RegistPag').addEventListener('click', () => {
-   modal.show();
-   document.querySelector('#salvar').innerHTML = 'Salvar';
+    document.querySelector("#cliente").value = '';
+    document.querySelector("#vencimento").value = '';
+    document.querySelector("#pagamento").value = '';
+    document.querySelector("#valor").value = '';
+    modal.show();
+    document.querySelector('#salvar').innerHTML = 'Salvar';
    
 });
 //FECHA O POPPUP DE ADIÇÃO DE PAGAMENTO
@@ -20,13 +24,18 @@ document.querySelector('#apagar').addEventListener('click', () => {
 //SALVA OS DADOS QUE FORAM DIGITADOS NO POPPUP
 document.querySelector('#salvar').addEventListener('click', () => {
    let nome = document.querySelector("#cliente").value;
-   let vencimento = new Date(document.querySelector("#vencimento").value);
-   let pagamento = new Date(document.querySelector("#pagamento").value);
+   let vencimento = document.querySelector("#vencimento").value;
+   let pagamento = document.querySelector("#pagamento").value;
    let valor = document.querySelector("#valor").value;
    let forma = document.querySelector("#forma").value;
-   
+
+   //REGEX PARA FAZER A VERIFICAÇÃO DE DATA BRASILEIRA VÁLIDA
+   function testeDataRegex(data){
+        const teste = /^\d{2}\/\d{2}\/\d{4}$/;
+        return teste.test(data);
+   }
    //VERIFICA SE TEM ALGUM CAMPO QUE NÃO FOI PREENCHIDO
-   if((nome == '') || (isNaN(vencimento.getTime())) || (isNaN(pagamento.getTime()))|| (valor == '') || (forma == '')){
+   if((nome == '') || (valor == '') || (forma == '') || (testeDataRegex(vencimento) == false) || (testeDataRegex(pagamento) == false)){
 
         document.querySelector('#mensagensNovPag').innerText = "Verifique se todas as informações foram fornecidas corretamente!";
         let msg = document.querySelector('#MensagensSobreAddPag');
@@ -125,9 +134,6 @@ class adicionarPagamento{
 
             td_id.id = "celula" + this.arrayPagamentos[i].id;
 
-            alert("id: " + this.id);
-            alert("array: " + this.arrayPagamentos[i].id);
-
             td_id.innerText = this.arrayPagamentos[i].id;
             td_NomeCli.innerText = this.arrayPagamentos[i].nomeCliente;
             td_Vencimento.innerText = this.arrayPagamentos[i].Vencimento;
@@ -149,6 +155,7 @@ class adicionarPagamento{
             let imgDelete = document.createElement('img');
             imgDelete.src = '../Imagens/lixeira.png';
             imgDelete.setAttribute("onclick", "addPagamento.deletar("+ this.arrayPagamentos[i].id +")");
+            //
         
             //ADICIONAR A IMAGEM AO td_acoes (DIZER QUE É UMA FILHA DE td_acoes) logo acima
             td_Acao.appendChild(imgEdit);
@@ -203,11 +210,15 @@ class adicionarPagamento{
             //ATUALIZAR A LISTA
             let tbody = document.querySelector('#tbody');
             var oId;
-            this.id--
 
             //PEERCORRER O ARRAY E IDENTIFICAR O ID DO ITEM QUE FOI SELECIONADO
             for(let i = 0; i < this.arrayPagamentos.length; i++){
-                if(this.arrayPagamentos[i].id == id){
+                alert(this.arrayPagamentos[i].id);
+                alert(id);
+
+                if(id == this.arrayPagamentos[i].id){
+
+                    document.querySelector(`#celula${this.arrayPagamentos[i].id}`).remove;
                     oId = this.arrayPagamentos[i].id;
                     this.arrayPagamentos.splice(i, 1);
                     tbody.deleteRow(i);
@@ -219,14 +230,13 @@ class adicionarPagamento{
 
                     this.arrayPagamentos[i].id = this.arrayPagamentos[i].id - 1;
 
-                alert("array: " + this.arrayPagamentos[i].id);
                 //PEGA A TABELA COM O ID ANTIGO E TIRA 1 DELA (VALOR DO ID -1)
                     document.querySelector(`#celula${this.arrayPagamentos[i].id + 1}`).innerText = this.arrayPagamentos[i].id;
                 //MODA O ID DA TABELA (ID - 1)
                     document.querySelector(`#celula${this.arrayPagamentos[i].id + 1}`).id = `#celula${this.arrayPagamentos[i].id}`;
-                    alert(this.arrayPagamentos[i].id);
                 }
             }
+            this.id--
         }
     }
 }
