@@ -154,6 +154,7 @@ class adicionarPagamento{
                 
             let imgDelete = document.createElement('img');
             imgDelete.src = '../Imagens/lixeira.png';
+            imgDelete.id = "delete" + this.arrayPagamentos[i].id;
             imgDelete.setAttribute("onclick", "addPagamento.deletar("+ this.arrayPagamentos[i].id +")");
             //
         
@@ -209,7 +210,6 @@ class adicionarPagamento{
         if(confirm("Deseja realmente deletar estes dados?")){
             //ATUALIZAR A LISTA
             let tbody = document.querySelector('#tbody');
-            var oId;
 
             //PEERCORRER O ARRAY E IDENTIFICAR O ID DO ITEM QUE FOI SELECIONADO
             for(let i = 0; i < this.arrayPagamentos.length; i++){
@@ -218,15 +218,13 @@ class adicionarPagamento{
 
                 if(id == this.arrayPagamentos[i].id){
 
-                    document.querySelector(`#celula${this.arrayPagamentos[i].id}`).remove;
-                    oId = this.arrayPagamentos[i].id;
                     this.arrayPagamentos.splice(i, 1);
                     tbody.deleteRow(i);
                 }
             }
 
             for (let i = 0; i < this.arrayPagamentos.length; i++) {           
-                if (oId <= this.arrayPagamentos[i].id) {
+                if (id <= this.arrayPagamentos[i].id) {
 
                     this.arrayPagamentos[i].id = this.arrayPagamentos[i].id - 1;
 
@@ -235,6 +233,8 @@ class adicionarPagamento{
                 //MODA O ID DA TABELA (ID - 1)
                     document.querySelector(`#celula${this.arrayPagamentos[i].id + 1}`).id = `#celula${this.arrayPagamentos[i].id}`;
                 }
+                //VERIFICAR!!!!!!!!!!!!!!!!!!!!!!!
+                //document.querySelector(`#delete${this.arrayPagamentos[i].id}`).removeAttribute("src");
             }
             this.id--
         }
