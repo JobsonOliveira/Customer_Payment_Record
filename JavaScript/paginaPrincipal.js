@@ -86,9 +86,12 @@ class adicionarPagamento{
        
         let pagamento = this.lerDados();
 
+        //QUANDO É O REGISTRO DE UM NOVO PAGAMENTO
         if(this.editId == null){
             this.adicionar(pagamento);
-        }else{
+        }
+        //QUANDO É UMA EDIÇÃO DE UM PAGAMENTO
+        else{
             this.atualizar(this.editId, pagamento);
         }
         this.listaTabela();
@@ -130,10 +133,9 @@ class adicionarPagamento{
             let td_Forma = tr.insertCell();
             let td_Acao = tr.insertCell();
            
-            //--------------------------------------------VERIFICAR
-
+            
+            //INSERE OS DADOS DO ARRAY NA CÉLULA CORRESPONDENTE A ELE NA TABELA
             td_id.id = "celula" + this.arrayPagamentos[i].id;
-
             td_id.innerText = this.arrayPagamentos[i].id;
             td_NomeCli.innerText = this.arrayPagamentos[i].nomeCliente;
             td_Vencimento.innerText = this.arrayPagamentos[i].Vencimento;
@@ -147,16 +149,17 @@ class adicionarPagamento{
             document.querySelector("#pagamento").value = '';
             document.querySelector("#valor").value = '';
 
-
+            //ADICIONA A OPÇÃO DE EDITAR O PAGAMENTO QUE ESTÁ SENDO REGISTRADO
             let imgEdit = document.createElement('img');
             imgEdit.src = '../Imagens/lapis.png';
-            imgEdit.setAttribute("onclick", "addPagamento.preparaEdicao("+ JSON.stringify(this.arrayPagamentos[i]) +")");
+            imgEdit.id = "edicao" + this.arrayPagamentos[i].id;
+            imgEdit.setAttribute("onclick", "addPagamento.preparaEdicao("+ this.arrayPagamentos[i].id +")");
                 
+            //ADICIONA A OPÇÃO DE DELETAR O PAGAMENTO QUE ESTÁ SENDO REGISTRADO
             let imgDelete = document.createElement('img');
             imgDelete.src = '../Imagens/lixeira.png';
             imgDelete.id = "delete" + this.arrayPagamentos[i].id;
             imgDelete.setAttribute("onclick", "addPagamento.deletar("+ this.arrayPagamentos[i].id +")");
-            //
         
             //ADICIONAR A IMAGEM AO td_acoes (DIZER QUE É UMA FILHA DE td_acoes) logo acima
             td_Acao.appendChild(imgEdit);
@@ -165,16 +168,22 @@ class adicionarPagamento{
     }
 
     //CAPTURA OS DADOS DO PAGAMENTO SELECIONADO PARA EDIÇÃO E COLOCA NO POPPUP PARA SER MODIFICADO
-    preparaEdicao(pagamento){
-        this.editId = pagamento.id;
+    preparaEdicao(id){
+        this.editId = id;
         let modal = document.querySelector("#dialogAddPag");
         modal.show();
 
-        document.querySelector('#cliente').value = pagamento.nomeCliente;
-        document.querySelector('#vencimento').value = pagamento.Vencimento;
-        document.querySelector('#pagamento').value = pagamento.Pagamento;
-        document.querySelector('#valor').value = pagamento.Valor;
-        document.querySelector('#forma').value = pagamento.Forma;
+        //PERCORRE O ARRAY E ADICIONA AS INFORMAÇÕES DO PAGAMENTO REFERENE AO ID DO PAGAMENTO SELECIONDAD
+        for (let i = 0; i < this.arrayPagamentos.length; i++) {
+            if(this.arrayPagamentos[i].id == id){
+                //MOSTRA OS DADOS NA TELA
+                document.querySelector('#cliente').value = `${this.arrayPagamentos[i].nomeCliente}`;
+                document.querySelector('#vencimento').value = `${this.arrayPagamentos[i].Vencimento}`;
+                document.querySelector('#pagamento').value = `${this.arrayPagamentos[i].Pagamento}`;
+                document.querySelector('#valor').value = `${this.arrayPagamentos[i].Valor}`;
+                document.querySelector('#forma').value = `${this.arrayPagamentos[i].Forma}`;
+            }            
+        }
 
         //MUDAR O NOME DO BOTÃO PARA "Atualizar"
         document.querySelector('#salvar').innerHTML = 'ATUALIZAR'; 
@@ -213,29 +222,48 @@ class adicionarPagamento{
 
             //PEERCORRER O ARRAY E IDENTIFICAR O ID DO ITEM QUE FOI SELECIONADO
             for(let i = 0; i < this.arrayPagamentos.length; i++){
-                alert(this.arrayPagamentos[i].id);
-                alert(id);
 
+                //RETIRA O ATRIBUTO DA IMAGENS DE DELETAR PARA SER ATUALIZADO
+                document.querySelector(`#delete${this.arrayPagamentos[i].id}`).removeAttribute('onclick');
+
+                //RETIRA O ATRIBUTO DA IMAGENS DE DELETAR PARA SER ATUALIZADO
+                document.querySelector(`#edicao${this.arrayPagamentos[i].id}`).removeAttribute('onclick');
+
+                //APAGA O REGISTRO NO ARRAY SE ELE FOR ENCONTRADO
                 if(id == this.arrayPagamentos[i].id){
-
+                    
                     this.arrayPagamentos.splice(i, 1);
                     tbody.deleteRow(i);
                 }
             }
 
+            //PERCORRE O ARRAY REALIZAR ATUALIZAÇÕES DE TELA E MODIFICAÇÕES DE IDs DOS COMPONENTES
             for (let i = 0; i < this.arrayPagamentos.length; i++) {           
                 if (id <= this.arrayPagamentos[i].id) {
-
+                    
+                    //PEGA O ID DE CADA ITEM DO ARRAY E TIRA 1
                     this.arrayPagamentos[i].id = this.arrayPagamentos[i].id - 1;
+
+                    //ADICIONA UM NOVO ATRIBUTO A IMAGEM DE DELETAR, ATUALIZANDO O ID DO PAGAMENTO
+                    document.querySelector(`#delete${this.arrayPagamentos[i].id + 1}`).setAttribute("onclick", "addPagamento.deletar("+ this.arrayPagamentos[i].id +")");
+
+                    //ATUALIZA O ID DA IMAGEM DE DELETAR
+                    document.querySelector(`#delete${this.arrayPagamentos[i].id + 1}`).id =  `#delete${this.arrayPagamentos[i].id}`;
+
+                    //ADICIONA UM NOVO ATRIBUTO A IMAGEM DE EDITAR, ATUALIZANDO O ID DO PAGAMENTO
+                    document.querySelector(`#edicao${this.arrayPagamentos[i].id + 1}`).setAttribute("onclick", "addPagamento.preparaEdicao("+ this.arrayPagamentos[i].id +")");
+
+                    //ATUALIZA O ID DA IMAGEM DE EDITAR
+                    document.querySelector(`#edicao${this.arrayPagamentos[i].id + 1}`).id =  `#edicao${this.arrayPagamentos[i].id}`;
 
                 //PEGA A TABELA COM O ID ANTIGO E TIRA 1 DELA (VALOR DO ID -1)
                     document.querySelector(`#celula${this.arrayPagamentos[i].id + 1}`).innerText = this.arrayPagamentos[i].id;
+
                 //MODA O ID DA TABELA (ID - 1)
                     document.querySelector(`#celula${this.arrayPagamentos[i].id + 1}`).id = `#celula${this.arrayPagamentos[i].id}`;
                 }
-                //VERIFICAR!!!!!!!!!!!!!!!!!!!!!!!
-                //document.querySelector(`#delete${this.arrayPagamentos[i].id}`).removeAttribute("src");
             }
+            //RETIRA 1 DO ID GLOBAL, PARA QUE O NOVO PAGAMENTO REGISTRADO TENHA O ID CORRETO
             this.id--
         }
     }
