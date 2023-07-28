@@ -238,7 +238,7 @@ a{
     #box{
         display: grid;
         background: rgba(255, 255, 255, 0.1);
-        width: 60vh;
+        width: 50vh;
         border-radius: 15px;
         border: 2px solid #0353ffda;
     }
@@ -247,17 +247,17 @@ a{
         text-align: center;
         padding-top: 1vh;
         height: 13vh;
-        font-size: 2vh;
+        font-size: 1.8vh;
     }
     /*NOME 'PÁGINA DE REGISTRO'*/
     #top h2{
-        margin-top: 1vh;
+        margin-top: .5vh;
     }
     /*MEIO DO SITE, CONTEM AS ENTRADAS DE DADOS*/
     #main{
         display: grid;
         justify-content: center;
-        height: 60vh;
+        height: 55vh;
     }
     /*INPUTS, ENTRADAS DOS DADOS*/
     #main input#nome,
@@ -270,7 +270,7 @@ a{
         border-bottom: 1px solid #000;
         font-size: 3.5vh;
         outline: 0;
-        width: 50vh;
+        width: 45vh;
         height: 5vh;
         color: #090081;
     }
@@ -280,8 +280,8 @@ a{
     label#Labellogin,
     label#Labelsenha{
         position: relative;
-        top: -100%;
-        font-size: 3.5vh;
+        top: -85%;
+        font-size: 2.5vh;
         width: 20vh;
         height: 4vh;
         transition: 1s;
@@ -323,7 +323,7 @@ a{
     /*LABEL DA 'DATA DE NASCIMENTO' E DO 'GÊNERO'*/
     label#LabelDatNasc,
     label#LabelGenero{
-        font-size: 2.7vh;
+        font-size: 2.5vh;
     }
     /*INPUT DATA DE NASCIMENTO*/
     div#Dnasc_Genero input,
@@ -331,7 +331,7 @@ a{
         background: none;
         border: 1px solid #0353ffda;
         border-radius: 10px;
-        width: 20vh;
+        width: 18vh;
         font-size: 2.2vh;
         margin-left: 2vh;
     }
