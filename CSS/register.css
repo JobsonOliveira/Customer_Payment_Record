@@ -197,13 +197,15 @@ a{
         top: 1%;
         margin-left: 50%;
         transform: translate(-50%);
-        font-size: 1.5vh;
+        font-size: 50%;
         background: linear-gradient(to left, rgb(0, 255, 42), rgb(0, 119, 255));
         border-radius: 15px;
         padding: 1vh;
         transition: 1s;
         border: 2px solid #0353ffda;
         animation: mover .3s;
+        width: 40%;
+        text-align: center;
     }
     @keyframes mover {
         from{
@@ -221,18 +223,6 @@ a{
         background: linear-gradient(to left, rgba(0, 255, 42, 0.589), rgba(0, 119, 255, 0.589));
         justify-content: center;
         padding-top: 2%;
-    }
-    /*Menságem de sucesso*/
-    #mensagemDeSucesso{
-        background-color: rgba(255, 255, 255);
-        position: absolute;
-        text-align: center;
-        color: #0b940b;
-        width: 60vh;
-        height: 11vh;
-        border-radius: 5px;
-        font-size: 2vh;
-        border: 2px solid #000;
     }
     /*BOX CONTENDO TODOS OS DADOS*/
     #box{
